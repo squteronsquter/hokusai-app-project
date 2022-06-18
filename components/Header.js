@@ -1,4 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
+import Logo from "../public/images/hokusai-logo.svg";
+
 import { Navbar, Nav, Container } from "react-bootstrap";
 
 const Header = () => {
@@ -8,7 +11,17 @@ const Header = () => {
         <Container>
           <Navbar variant="dark">
             <Navbar.Brand>
-              <Link href="/">Hokusai</Link>
+              <Link href="/" passHref>
+                <a>
+                  <Image
+                    src="/images/hokusai-logo.svg"
+                    alt="Hokusai Logo"
+                    width="40"
+                    height="40"
+                  />
+                </a>
+              </Link>
+              {/* <Image src={Logo} alt="Hokusai Logo" width={40} height={40} /> */}
             </Navbar.Brand>
             <Nav>
               <Link href="/" passHref>
